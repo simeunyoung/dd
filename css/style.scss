@@ -1,0 +1,36 @@
+.wrapper {
+  background-color: var(--blue100);
+  width: 1920px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.login-box {
+  width: 1000px;
+  height: 630px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+  display: flex;
+}
+.login-img {
+  position: relative;
+}
+.login-main {
+  width: 450px;
+  padding: 102px 40px 88px 40px;
+  text-align: center;
+  img {
+    padding: 0 49px;
+    margin-bottom: 71px;
+  }
+  input {
+    margin-bottom: 12px;
+  }
+}

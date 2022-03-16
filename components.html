@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unit</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <style>
+      body {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      article {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+      input,
+      button,
+      select {
+        max-width: 300px;
+      }
+      #select {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <!--요소 복사는 common_section 부분 제외 해당 요소만 복사할 것-->
+
+    <section>
+      <h1>버튼</h1>
+      <article>
+        <div class="checkbox">
+          <input type="checkbox" name="ck" id="ck" />
+          <label for="ck"><span class="ico"></span>아이디 저장</label>
+        </div>
+        <button class="btn-ell-blue">로그인</button>
+        <button class="btn-refresh"></button>
+        <button class="btn-speaker"></button>
+      </article>
+    </section>
+
+    <section>
+      <h1>아이콘</h1>
+      <article>
+        <span class="ic-id"></span>
+        <span class="ic-pw"></span>
+      </article>
+    </section>
+
+    <section>
+      <h1>인풋</h1>
+      <article>
+        <input type="text" class="ic-id" placeholder="아이디를 입력해주세요." />
+        <input type="text" class="pre-input" placeholder="인증번호 입력" />
+        <!-- <style>
+          .selectBox2 * {
+            box-sizing: border-box;
+          }
+          .selectBox2 {
+            position: relative;
+            width: 150px;
+            height: 35px;
+            border-radius: 4px;
+            border: 2px solid lightcoral;
+            background: url("https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png") calc(100% - 7px) center no-repeat;
+            background-size: 20px;
+            cursor: pointer;
+          }
+
+          .selectBox2:after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 35px;
+            background: lightcoral;
+          }
+
+          .selectBox2 .label {
+            display: flex;
+            align-items: center;
+            width: inherit;
+            height: inherit;
+            border: 0 none;
+            outline: 0 none;
+            padding-left: 15px;
+            background: transparent;
+            cursor: pointer;
+          }
+
+          .selectBox2 .optionList {
+            position: absolute;
+            top: 28px;
+            left: 0;
+            width: 100%;
+            background: lightcoral;
+            color: #fff;
+            list-style-type: none;
+            padding: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            max-height: 0;
+            transition: 0.3s ease-in;
+          }
+
+          .selectBox2.active .optionList {
+            max-height: 500px;
+          }
+
+          .selectBox2 .optionItem {
+            border-bottom: 1px dashed rgb(170, 72, 72);
+            padding: 5px 15px 5px;
+            transition: 0.1s;
+          }
+
+          .selectBox2 .optionItem:hover {
+            background: rgb(175, 93, 93);
+          }
+
+          .selectBox2 .optionItem:last-child {
+            border-bottom: 0 none;
+          }
+        </style> -->
+
+        <style>
+          .selectBox2 {
+            width:300px;position:relative;
+          }
+          .label{width:100%;text-align: left;border:1px solid var(--blue600);background-color: var(--white);height: 38px;border-radius: 4px;padding:0 48px 0 16px;color:var(--blue700-80);
+            background: url(./img/ic_dropdown_arrow_down_default.svg)no-repeat 96% center;
+          }
+          .optionList{width:100%;border:1px solid var(--blue600);background-color: var(--white);border-radius: 4px;height: 190px;overflow-y: auto;position:absolute;top:46px;display: none;
+   
+}
+          .optionItem{padding:8px 16px 10px 16px;}
+          .optionItem:hover{background-color: var(--blue300-10);color:var(--blue400);font-weight: 600;}
+
+          .optionList::-webkit-scrollbar{
+            width:2px;
+          }
+
+          .optionList::-webkit-scrollbar-thumb { background-color: var(--blue700-50); box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5); border-radius: 100px; }
+
+
+        </style>
+
+        <div class="selectBox2">
+          <button class="label">셀렉트</button>
+          <ul class="optionList">
+            <li class="optionItem">옵션1</li>
+            <li class="optionItem">옵션2</li>
+            <li class="optionItem">옵션3</li>
+            <li class="optionItem">옵션4</li>
+            <li class="optionItem">옵션5</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(".label").click(function(){
+        const select = $(this);
+
+        // 드롭다운 열기
+        select.next(".optionList").slideDown(100);
+
+        //다른영역 클릭 시 닫기
+     
+      })
+    </script>
+  </body>
+</html>

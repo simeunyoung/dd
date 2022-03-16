@@ -1,0 +1,129 @@
+@charset "UTF-8"; @font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Thin.otf) format("opentype"); font-style: normal; font-weight: 100; } 
+@font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Light.otf) format("opentype"); font-style: normal; font-weight: 300; } 
+@font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Regular.otf) format("opentype"); font-style: normal; font-weight: 400; } 
+@font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Medium.otf) format("opentype"); font-style: normal; font-weight: 500; } 
+@font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Bold.otf) format("opentype"); font-style: normal; font-weight: 700; } 
+@font-face { font-family: "Noto Sans KR"; src: url(../font/NotoSansKR-Black.otf) format("opentype"); font-style: normal; font-weight: 900; } 
+
+:root { -webkit-tap-highlight-color: transparent; text-size-adjust: 100%; cursor: default; overflow-wrap: break-word; 
+    
+    --white: #fff; --black: #000;
+
+ --gray100: #f9fafd; --gray200: #bcbfc7; --gray300: #bfc2c8; --gray400: #8c8c8c; --gray500: #616366;
+ --blue100: #f2f7ff; --blue200: #c2ecf3; --blue300: #1bc1db; --blue300-10: hsl(188, 78%, 48%,.1);  --blue400: #00aace; --blue500: #04a3bb;
+  --blue600: #2a3d72; --blue700: #141f40; --blue700-20: rgba(20, 31, 64, 0.2); --blue700-50: rgba(20, 31, 64, 0.5); --blue700-80: rgba(20, 31, 64, 0.8);
+ --red100: #d06062;
+ --green100: #207245; } 
+
+*,
+::before,
+::after { box-sizing: border-box; border-width: 0; border-style: solid; } 
+
+html { line-height: 1.5; -webkit-text-size-adjust: 100%; -moz-tab-size: 4; tab-size: 4; font-family: "Noto Sans KR", sans-serif; height: 100%; } 
+
+body { margin: 0; line-height: inherit; font-size: 14px; height: 100%; } 
+hr { height: 0; color: inherit; border-top-width: 1px; } 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-size: inherit; font-weight: inherit; } 
+a { color: inherit; text-decoration: inherit; outline: none; } 
+a:hover,
+a:active { text-decoration: none; color: initial; background-color: transparent; } 
+b,
+strong { font-weight: bolder; } 
+
+small { font-size: 80%; } 
+sub,
+sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } 
+sub { bottom: -0.25em; } 
+sup { top: -0.5em; } 
+table { text-indent: 0; border-color: inherit; border-collapse: collapse; } 
+button,
+input,
+optgroup,
+select,
+textarea { font-family: inherit; font-size: 100%; line-height: inherit; color: inherit; margin: 0; padding: 0; } 
+button,
+select { text-transform: none; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: none; } 
+input:focus,
+select:focus { outline: none; } 
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand { display: none; } 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] { -webkit-appearance: button; background-color: transparent; background-image: none; } 
+:-moz-focusring { outline: auto; } 
+:-moz-ui-invalid { box-shadow: none; } 
+progress { vertical-align: baseline; } 
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button { height: auto; } 
+[type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } 
+::-webkit-search-decoration { -webkit-appearance: none; } 
+::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } 
+summary { display: list-item; } 
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre { margin: 0; } 
+fieldset { margin: 0; padding: 0; } 
+legend { padding: 0; } 
+ol,
+ul,
+menu { list-style: none; margin: 0; padding: 0; } 
+textarea { resize: vertical; } 
+input::placeholder,
+textarea::placeholder { opacity: 1; color: var(--blue700-50); } 
+button,
+[role="button"] { cursor: pointer; } 
+:disabled { cursor: default; } 
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object { display: block; vertical-align: middle; } 
+img,
+video { max-width: 100%; height: auto; } 
+[hidden] { display: none; } 
+
+input::placeholder{ opacity: 1; color: var(--blue700-50); } 
+input { width: 100%; height: 48px; border: 1px solid var(--gray200); border-radius: 4px; background-color: var(--white); padding: 0 16px; color: var(--blue700-80); } 
+input:focus { border: 1px solid var(--blue700); } 
+input.error { border: 1px solid var(--red100); background: url(../img/c_ic_login_warning.svg) no-repeat 96% center; } 
+input.btnClear { background: url(../img/c_ic_login_delete.svg) no-repeat 96% center; cursor:default; } 
+input:disabled { background-color: var(--gray100); border:1px solid var(--gray200); color:var(--blue700-20) } 
+input:disabled::placeholder { color:var(--blue700-20) } 
+
+input[type="checkbox"] + label { display: flex; align-items: center; justify-content: center; color: var(--blue700); cursor: pointer; } 
+input[type="checkbox"] + label > .ico { background: url(../img/ic_checkbox_default.svg) no-repeat center/cover; width: 20px; height: 20px; display: inline-block; margin-right: 10px; } 
+input[type="checkbox"]:checked + label > .ico { background: url(../img/ic_checkbox_selected.svg) no-repeat center/cover; width: 20px; height: 20px; display: inline-block; } 
+input[type="checkbox"]:checked:disabled + label > .ico { background: url(../img/ic_checkbox_selected_disabled.svg) no-repeat center/cover; width: 20px; height: 20px; display: inline-block; } 
+input[type="checkbox"]:disabled + label > .ico { background: url(../img/ic_checkbox_disabled.svg) no-repeat center/cover; width: 20px; height: 20px; display: inline-block; } 
+
+input[type="checkbox"] { display: none; } 
+
+
+
+/* 공통 */
+
+.red { color: var(--red100); } 
+
+/* components */
+section h1 { font-size: 22px; font-weight: 700; margin-bottom: 20px; } 
+section { margin-bottom: 40px; } 

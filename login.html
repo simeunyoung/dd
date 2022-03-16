@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login-wrap">
+        <div class="login-box">
+          <div class="login-main">
+            <img src="./img/img_login_kt_logo.webp" alt="img_login_kt_logo" />
+            <input type="text" class="ic-id" placeholder="아이디를 입력해주세요." />
+            <input type="text" class="ic-pw" placeholder="비밀번호를 입력해주세요." />
+            <div class="prevention">
+              <div class="pre-img"></div>
+              <div class="pre-icon">
+                <button class="btn-refresh"></button>
+                <button class="btn-speaker"></button>
+              </div>
+              <input type="text" class="pre-input" placeholder="인증번호 입력" />
+            </div>
+            <span class="red">아이디 혹은 비밀번호가 올바르지 않습니다. 다시 입력해주세요</span>
+            <button class="btn-ell-blue">로그인</button>
+            <div class="login-option">
+              <a href="#" class="new-account">신규 계정 신청</a>
+              <div class="checkbox">
+                <input type="checkbox" name="ck" id="ck" />
+                <label for="ck"><span class="ico"></span>아이디 저장</label>
+              </div>
+            </div>
+          </div>
+          <div class="login-img">
+            <img src="./img/img_help.webp" alt="login_img" />
+            <div class="img-text">
+              <p>통합광고플랫폼 계정으로 접속하세요.</p>
+              <p>
+                청약 영업 관리 / 운영관리 / 리포트 등 다양한 서비스를<br />
+                이용하실 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="login-footer">
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">청소년보호정책</a></li>
+            <li><a href="#">이메일</a></li>
+            <li><a href="#">무단수집거부</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="address">
+            주)케이티 대표이사 구현모 · 사업자등록번호 : 102-81-42945 통신판매업신고 : 2002-경기성남-0048 · 463-711 경기도 성남시 분당구 불정로 90 (정자동 206번지)<br />
+            Copyright (c) 2013 kt corp. all rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("input").on("input", function () {
+          if ($(this).val() == "") {
+            $(this).removeClass("btnClear");
+          } else {
+            $(this).addClass("btnClear");
+          }
+        });
+        $("input").focusout("input", function () {
+          $(this).removeClass("btnClear");
+        });
+        $("input").focusin("input", function () {
+          $(this).addClass("btnClear");
+        });
+      });
+    </script>
+  </body>
+</html>
